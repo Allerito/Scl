@@ -1,0 +1,95 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Scl",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#punctuation"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.scl",
+					"match": "\\b(if|elsif|else|while|return)\\b"
+				},
+				{
+					"name": "keyword.operator.logical.scl",
+					"match": "\\b([Aa][Nn][Dd]|[Oo][Rr])\\b"
+				},
+				{
+					"name": "keyword.operator.assignment.scl",
+					"match": "="
+				},
+				{
+					"name": "keyword.operator.comparison.scl",
+					"match": "(=(=)?(?!>)|!=|<=|(?<!=)>=|<|>)"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "entity.name.type.scl",
+					"match": "\\b([Ss][Tt][Rr][Ii][Nn][Gg]|[Nn][Uu][Mm]|[Bb][Oo][Oo][Ll]|[Vv][Ee][Cc]3)\\b"
+				},
+				{
+					"include": "#variables"
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "punctuation.comma.scl",
+					"match": ","
+				},
+				{
+					"name": "punctuation.semi.scl",
+					"match": ";"
+				},
+				{
+					"name": "punctuation.brackets.curly.scl",
+					"match": "[{}]"
+				},
+				{
+					"name": "punctuation.brackets.round.scl",
+					"match": "[()]"
+				},
+				{
+					"name": "punctuation.brackets.square.scl",
+					"match": "[\\[\\]]"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.scl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scl",
+					"match": "\\^\""
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.name.scl",
+					"match": "\\b[a-zA-Z0-9_]+$\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.scl"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "scl",
+  "displayName": "Scl",
+  "description": "Scl language support with intellisens, linting and formatting",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "scl",
+      "aliases": ["Scl", "scl"],
+      "extensions": [".ppl",".ppf",".ppe",".ppp",".scl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "scl",
+      "scopeName": "source.scl",
+      "path": "./syntaxes/scl.tmLanguage.json"
+    }]
+  }
+}
